@@ -1,0 +1,47 @@
+{
+  "name": "backend-test-project",
+  "version": "1.0.0",
+  "private": true,
+  "description": "24G Backend Test Project",
+  "main": "test.js",
+  "scripts": {
+    "test": "node test.js",
+    "lint:eslint": "eslint --fix",
+    "lint:prettier": "prettier --write --loglevel warn",
+    "insertdata": "node insertdata.js",
+    "retrieve" : "node retrieve.js",
+    "userPatch": "node userPatch.js",
+    "deleteUser": "node deleteUser.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@twentyfourg/cloud-sdk": "^2.7.0",
+    "axios": "^1.5.1",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.1",
+    "pkg.json": "^2.0.8"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2",
+    "typescript": "^5.2.2",
+    "yorkie": "^2.0.0"
+  },
+  "gitHooks": {
+    "commit-msg": "npx --no-install commitlint --edit $1",
+    "pre-commit": "lint-staged"
+  }
+}
